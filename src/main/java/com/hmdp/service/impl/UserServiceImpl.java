@@ -72,6 +72,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         // 存入redis并返回token
         // token 生成
         String token = UUID.randomUUID(true).toString();
+        System.out.println("token:"+token);
         // get info & change2HashMap
         UserDTO userDTO = BeanUtil.copyProperties(user, UserDTO.class);
         // 把非String的类型转换为String
